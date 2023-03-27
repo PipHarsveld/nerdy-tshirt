@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nerdy Tshirt</title>
 </head>
+
 <body>
     <header>
         <h1>Nerdy Tshirts</h1>
     </header>
     <main>
-        <h2>Bestellen</h2>
 
         <form action="/order-tshirt" method="post">
-            <label for="voornaam">Voornaam:</label>
-            <input type="text" id="voornaam" name="voornaam" required>
-          
-            <label for="achternaam">Achternaam:</label>
-            <input type="text" id="achternaam" name="achternaam" required>
-          
-            <label for="telefoonnummer">Telefoonnummer:</label>
-            <input type="tel" id="telefoonnummer" name="telefoonnummer" required>
-          
-            <label for="emailadres">Emailadres:</label>
-            <input type="email" id="emailadres" name="emailadres" required>
-          
-            <label for="straatnaam">Straatnaam:</label>
-            <input type="text" id="straatnaam" name="straatnaam" required>
-          
-            <label for="huisnummer">Huisnummer:</label>
-            <input type="text" id="huisnummer" name="huisnummer" required>
-          
-            <label for="postcode">Postcode:</label>
-            <input type="text" id="postcode" name="postcode" required>
-          
-            <label for="plaatsnaam">Plaatsnaam:</label>
-            <input type="text" id="plaatsnaam" name="plaatsnaam" required>
-          
+            <legend>Bestellen</legend>
+
+            <fieldset>
+                <label for="voornaam">Voornaam:
+                    <input type="text" id="voornaam" name="voornaam" required>
+                </label>
+                <br>
+                <label for="achternaam">Achternaam:
+                    <input type="text" id="achternaam" name="achternaam" required>
+                </label>
+                
+            </fieldset>
+
+            <fieldset>
+                <label for="telefoonnummer">Telefoonnummer:
+                    <input type="tel" id="telefoonnummer" name="telefoonnummer" required>
+                </label>
+                <br>
+                <label for="emailadres">Emailadres:
+                    <input type="email" id="emailadres" name="emailadres" required>
+                </label>
+                
+            </fieldset>
+
+            <fieldset>
+                <label for="straatnaam">Straatnaam:
+                    <input type="text" id="straatnaam" name="straatnaam" required>
+                </label>
+                <br>
+                <label for="huisnummer">Huisnummer:
+                    <input type="text" id="huisnummer" name="huisnummer" required>
+                </label>
+                <br>
+                <label for="postcode">Postcode:
+                    <input type="text" id="postcode" name="postcode" required>
+                </label>
+                <br>
+                <label for="plaatsnaam">Plaatsnaam:
+                    <input type="text" id="plaatsnaam" name="plaatsnaam" required>
+                </label>
+            </fieldset>
+
             <input type="submit" value="Bestel t-shirt">
-          </form>
+        </form>
     </main>
 </body>
+
 </html>

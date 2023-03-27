@@ -13,34 +13,46 @@
     <main>
         <h2>Design je T-shirt!</h2>
 
-        <form>
-            <label for="color">Kleur:</label>
-            <select id="color" name="color">
-              <option value="white">Wit</option>
-              <option value="black">Zwart</option>
-              <option value="yellow">Geel</option>
-              <option value="blue">Blauw</option>
-              <option value="red">Rood</option>
-            </select>
+        <form action="/overview.html" method="post">
+          <fieldset>
+            <label for="color">Kleur:
+              <select id="color" name="color">
+                <option value="white">Wit</option>
+                <option value="black">Zwart</option>
+                <option value="yellow">Geel</option>
+                <option value="blue">Blauw</option>
+                <option value="red">Rood</option>
+              </select>
+            </label>
+            <br>
 
-            <label for="size">Maat:</label>
-            <select id="size" name="size">
-              <option value="small">S</option>
-              <option value="medium">M</option>
-              <option value="large">L</option>
-              <option value="xlarge">XL</option>
-            </select>
+            <label for="size">Maat:
+              <select id="size" name="size">
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+                <option value="xlarge">XL</option>
+              </select>
+            </label>
+            <br>
 
-            <label for="sex">Geslacht:</label>
-            <input type="radio" id="male" name="sex" value="male">
-            <label for="male">Man</label>
-            <input type="radio" id="female" name="sex" value="female">
-            <label for="female">Vrouw</label>
-            <input type="radio" id="unisex" name="sex" value="unisex">
-            <label for="female">Unisex</label>
+            <label for="gender">Geslacht:</label>
+            <label for="male">
+              <input type="radio" id="male" name="gender" value="male">Man
+            </label>
+            <label for="female">
+              <input type="radio" id="female" name="gender" value="female">Vrouw
+            </label>
+            <label for="female">
+              <input type="radio" id="unisex" name="gender" value="unisex">Unisex
+            </label>
+            <br>
+          </fieldset>
 
+          <fieldset>
             <label for="text">Tekst:</label>
             <input type="text" id="text" name="text">
+          </fieldset>
 
             <input type="submit" value="Voeg toe aan winkelmandje">
           </form>
