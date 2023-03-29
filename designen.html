@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nerdy Tshirt</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Nerdy Tshirt</title>
 </head>
+
 <body>
-    <header>
-        <h1>Nerdy Tshirts</h1>
-    </header>
-    <main>
-        <h2>Design je T-shirt!</h2>
+  <header>
+    <a href="index.html">
+      <h1>Nerdy Tshirts</h1>
+    </a>
+  </header>
+  <main>
+    <h2>Design je T-shirt!</h2>
+    <img src="https://via.placeholder.com/150" alt="Design 1">
 
-        <form action="/overview.html" method="post">
-          <fieldset>
-            <label for="color">Kleur:
-              <select id="color" name="color">
-                <option value="white">Wit</option>
-                <option value="black">Zwart</option>
-                <option value="yellow">Geel</option>
-                <option value="blue">Blauw</option>
-                <option value="red">Rood</option>
-              </select>
-            </label>
-            <br>
+    <form action="/overview.html" method="get">
+      <fieldset>
+        <label for="head">Kleur:
+          <input type="color" id="color" name="color" value="#A4C2CD">
+        </label>
+        <br>
 
-            <label for="size">Maat:
-              <select id="size" name="size">
-                <option value="small">S</option>
-                <option value="medium">M</option>
-                <option value="large">L</option>
-                <option value="xlarge">XL</option>
-              </select>
-            </label>
-            <br>
+        <label for="size">Maat:
+          <select id="size" name="size">
+            <option value="small">S</option>
+            <option value="medium">M</option>
+            <option value="large">L</option>
+            <option value="xlarge">XL</option>
+          </select>
+        </label>
+        <br>
 
-            <label for="gender">Geslacht:</label>
-            <label for="male">
-              <input type="radio" id="male" name="gender" value="male">Man
-            </label>
-            <label for="female">
-              <input type="radio" id="female" name="gender" value="female">Vrouw
-            </label>
-            <label for="female">
-              <input type="radio" id="unisex" name="gender" value="unisex">Unisex
-            </label>
-            <br>
-          </fieldset>
+        <label for="gender">Geslacht:</label>
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male">Man
+        </label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female">Vrouw
+        </label>
+        <label for="female">
+          <input type="radio" id="unisex" name="gender" value="unisex">Unisex
+        </label>
+        <br>
+      </fieldset>
 
-          <fieldset>
-            <label for="text">Tekst:</label>
-            <input type="text" id="text" name="text">
-          </fieldset>
+      <fieldset>
+        <label for="text">Tekst:</label>
+        <input type="text" id="text" name="text">
+      </fieldset>
 
-            <input type="submit" value="Voeg toe aan winkelmandje">
-          </form>
-    </main>
+      <input type="submit" value="Voeg toe aan winkelmandje">
+    </form>
+  </main>
 </body>
+
 </html>

@@ -1,0 +1,58 @@
+/*************/
+/* CSS Reset */
+/*************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, p, li, a, input, label, button {
+    font-family: var(--font-paragraph);
+}
+
+
+
+
+/********/
+/* Root */
+/********/
+:root {
+    --background-color: #40474F;
+    --dark-color: #202327;
+    --accent-color: #D55140;
+
+    --text-color: #ffffff;
+
+    --font-paragraph: Arial, sans-serif;
+}
