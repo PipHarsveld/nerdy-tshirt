@@ -98,30 +98,36 @@ header>a>h1>span {
 
 
 main>svg{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
-/* .index>main>svg::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    background-color: var(--accent-color);
-} */
-
 .index>main a,
-.overview>main a {
+.overview>main a,
+input[type=submit] {
     background-color: var(--accent-color);
     padding: .5rem 1rem;
     margin: .5rem;
     display: inline-block;
     border-radius: 5rem;
     text-align: center;
-    width: 13rem;
+    min-width: 13rem;
+    border: none;
 }
+
+input[type=submit]{
+    text-align: center;
+    margin: auto;
+    display: block;
+    margin-top: 2rem;  
+}
+
+
+main>form>label{
+    margin: .25rem 0;
+    display: inline-block;
+}
+
 
 .index>main>section>a:nth-of-type(2){
     background-color: transparent;
@@ -135,6 +141,11 @@ main>svg{
     align-items: center;
 }
 
+form{
+    max-width: 20rem;
+}
+
 fieldset{
     border: none;
+    margin: .25rem 0;
 }
