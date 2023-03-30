@@ -127,38 +127,33 @@ form>fieldset {
     margin: .25rem 0;
 }
 
-form>fieldset>label {
-    margin-right: .5rem;
-}
-
 form>label>select {
     background-color: #ffffff;
     border: var(--borderwidth-input) solid black;
-    border-radius: 1rem;
+    border-radius: var(--borderradius-input);
     padding: .2rem .5rem;
-}
-
-/* Input velden */
-input,
-select {
-    margin-left: 1rem;
 }
 
 /* Radiobuttons met andere styling */
 input[type=radio] {
-    margin-right: .3rem;
     appearance: none;
+    position: absolute;
 }
 
 form>fieldset>label:nth-of-type(2),
 form>fieldset>label:nth-of-type(3),
 form>fieldset>label:nth-of-type(4) {
     border: var(--borderwidth-input) solid var(--text-color);
+    border-radius: var(--borderradius-input);
+    padding: .1rem .5rem;
+    display: inline-block;
 }
 
-input[type=radio]:checked+label {
-    background-color: var(--accent-color);
+form>fieldset>input:checked+label {
+    background-color: var(--text-color);
+    color: white;
 }
+
 
 input[type=text],
 input[type=tel],
@@ -222,7 +217,8 @@ header>a>h1>span {
     align-items: center;
 }
 
-.design>main>section:first-of-type>img, .overview>main>section>section:first-of-type>img {
+.design>main>section:first-of-type>img,
+.overview>main>section>section:first-of-type>img {
     height: 4rem;
     position: absolute;
     top: 40%;
