@@ -154,7 +154,6 @@ form>fieldset>input:checked+label {
     color: white;
 }
 
-
 input[type=text],
 input[type=tel],
 input[type=email] {
@@ -215,6 +214,15 @@ header>a>h1>span {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.design>main>section>p {
+    color: white;
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
 }
 
 .design>main>section:first-of-type>img,

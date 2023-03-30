@@ -47,6 +47,14 @@ switch (path) {
 
         });
 
+        const shirtText = document.createElement('p');
+        const TextInput = document.querySelector('form input[type="text"]');
+    
+        TextInput.addEventListener('input', (e) => {
+            shirtText.textContent = e.target.value;
+            document.querySelector('.design>main>section').appendChild(shirtText);
+        });
+
         form.addEventListener('submit', function (event) {
             event.preventDefault();
 
