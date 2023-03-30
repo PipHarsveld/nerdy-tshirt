@@ -38,7 +38,7 @@ li {
     list-style-type: none;
 }
 
-fieldset{
+fieldset {
     padding: 0;
     margin: 0;
 }
@@ -71,6 +71,7 @@ a {
     --accent-color: #FECE01;
     --text-color: #000000;
 
+    --borderwidth-input: .1rem;
     --borderradius-input: .3rem;
     --borderradius-button: 5rem;
 
@@ -83,10 +84,15 @@ a {
 /********************/
 /* Algemene styling */
 /********************/
+main>section {
+    position: relative;
+    width: fit-content;
+}
+
 /* Tshirt svg */
-main>svg{
+main svg {
     margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 /* Gele buttons */
@@ -103,28 +109,72 @@ input[type=submit] {
     border: none;
 }
 
+
+/********/
+/* Form */
+/********/
+form {
+    max-width: 20rem;
+}
+
+form>label {
+    margin: .25rem 0;
+    display: inline-block;
+}
+
+form>fieldset {
+    border: none;
+    margin: .25rem 0;
+}
+
+form>fieldset>label {
+    margin-right: .5rem;
+}
+
+form>label>select {
+    background-color: #ffffff;
+    border: var(--borderwidth-input) solid black;
+    border-radius: 1rem;
+    padding: .2rem .5rem;
+}
+
 /* Input velden */
-input, select{
+input,
+select {
     margin-left: 1rem;
 }
 
-input[type=radio]{
+/* Radiobuttons met andere styling */
+input[type=radio] {
     margin-right: .3rem;
+    appearance: none;
 }
 
-input[type=text], input[type=tel], input[type=email]{
+form>fieldset>label:nth-of-type(2),
+form>fieldset>label:nth-of-type(3),
+form>fieldset>label:nth-of-type(4) {
+    border: var(--borderwidth-input) solid var(--text-color);
+}
+
+input[type=radio]:checked+label {
+    background-color: var(--accent-color);
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
     border-radius: var(--borderradius-input);
-    border: .1rem solid black;
+    border: var(--borderwidth-input) solid black;
     padding: 0 .5rem;
     width: 70%;
 }
 
-input[type=submit]{
+input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover{
-    border: 3px solid black;
+input[type=submit]:hover {
+    border: var(--borderwidth-input) solid black;
 }
 
 
@@ -146,62 +196,36 @@ header>a>h1>span {
     line-height: 1rem;
 }
 
+
+
+/****************/
+/* Index pagina */
+/****************/
 .index>main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-
-
-
-
-
-/* input[type=submit]{
-    text-align: center;
-    margin: auto;
-    display: block;
-    margin-top: 2rem;  
-} */
-
-
-
-
-fieldset>label{
-    margin-right: .5rem;
-}
-
-select{
-    background-color: #ffffff;
-    border: .1rem solid black;
-    border-radius: 1rem;
-    padding: .2rem .5rem;
-}
-
-main>form>label{
-    margin: .25rem 0;
-    display: inline-block;
-}
-
-
-.index>main>section>a:nth-of-type(2){
+.index>main>section>a:nth-of-type(2) {
     background-color: transparent;
     border: .1rem solid var(--accent-color);
 }
 
 
-.designen>main{
-    display:flex;
+/********************/
+/* Design pagina */
+/********************/
+.design>main {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-form{
-    max-width: 20rem;
-}
-
-fieldset{
-    border: none;
-    margin: .25rem 0;
+.design>main>section:first-of-type>img, .overview>main>section>section:first-of-type>img {
+    height: 4rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
 }
