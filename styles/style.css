@@ -216,7 +216,8 @@ header>a>h1>span {
     align-items: center;
 }
 
-.design>main>section>p, .overview>main>section>section>p {
+.design>main>section>p,
+.overview>main>section>section>p {
     color: white;
     position: absolute;
     top: 32%;
@@ -225,7 +226,7 @@ header>a>h1>span {
     text-align: center;
 }
 
-.design>main>section:first-of-type>img,
+.design>main>section>img,
 .overview>main>section>section:first-of-type>img {
     max-height: 6rem;
     max-width: 4.5rem;
@@ -237,6 +238,28 @@ header>a>h1>span {
 
 
 
-.error{
+.error {
     border: 2px solid red;
+}
+
+
+
+@media screen and (min-width: 800px) {
+
+    .design>main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    .design>main>section>svg {
+        width: 25vw;
+        height: auto;
+        max-width: 25rem;
+    }
+
+    .design>main>section>img {
+        max-width: 9vw;
+        max-height: 13vw;
+    }
 }
