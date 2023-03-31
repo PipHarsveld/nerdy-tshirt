@@ -216,7 +216,7 @@ header>a>h1>span {
     align-items: center;
 }
 
-.design>main>section>p {
+.design>main>section>p, .overview>main>section>section>p {
     color: white;
     position: absolute;
     top: 32%;
@@ -227,9 +227,16 @@ header>a>h1>span {
 
 .design>main>section:first-of-type>img,
 .overview>main>section>section:first-of-type>img {
-    height: 4rem;
+    max-height: 6rem;
+    max-width: 4.5rem;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%);
+}
+
+
+
+.error{
+    border: 2px solid red;
 }
