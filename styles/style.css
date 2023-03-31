@@ -262,4 +262,9 @@ header>a>h1>span {
         max-width: 9vw;
         max-height: 13vw;
     }
+
+    .design>main>section>p{
+        font-size: 2vw;
+        top: 30%;
+    }
 }
