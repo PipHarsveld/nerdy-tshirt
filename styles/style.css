@@ -41,6 +41,7 @@ li {
 fieldset {
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 h1,
@@ -140,14 +141,25 @@ input[type=radio] {
     position: absolute;
 }
 
-form>fieldset>label:nth-of-type(2),
+/* form>fieldset>label:nth-of-type(2),
 form>fieldset>label:nth-of-type(3),
-form>fieldset>label:nth-of-type(4) {
+form>fieldset>label:nth-of-type(4),
+form>fieldset>label:nth-of-type(5),
+form>fieldset>label:nth-of-type(6) { */
+
+form>fieldset>label:not(:first-of-type) {
     border: var(--borderwidth-input) solid var(--text-color);
     border-radius: var(--borderradius-input);
     padding: .1rem .5rem;
     display: inline-block;
+    width: calc(100%/5.3);
+    text-align: center;
 }
+
+form>fieldset:nth-of-type(2)>label:not(:first-of-type){
+    width: calc(100%/3.1);
+}
+
 
 form>fieldset>input:checked+label {
     background-color: var(--text-color);
