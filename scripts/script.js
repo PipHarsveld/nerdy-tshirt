@@ -31,7 +31,7 @@ switch (path) {
 
             if (event.target.files && event.target.files[0]) {
                 reader.readAsDataURL(event.target.files[0]);
-            } 1
+            }
         });
 
 
@@ -63,7 +63,7 @@ switch (path) {
 
                 // Get form values
                 const color = document.querySelector('#color').value;
-                const size = document.querySelector('#size').value;
+                const size = document.querySelector('input[name="size"]:checked').value;
                 const gender = document.querySelector('input[name="gender"]:checked').value;
                 const text = document.querySelector('#text').value;
 
@@ -106,14 +106,19 @@ switch (path) {
         const gender = localStorage.getItem('gender');
         const savedText = localStorage.getItem('text');
         const savedImage = localStorage.getItem('image');
-        const imageElement = document.createElement('img');
-        const textElement = document.createElement('p');
+ 
+        if(savedText) {
+            const textElement = document.createElement('p');
+            textElement.innerText = savedText;
+            document.querySelector('.overview>main>section>section:first-of-type').appendChild(textElement);
+        }
 
-        imageElement.src = savedImage;
-        textElement.innerText = savedText;
 
-        document.querySelector('.overview>main>section>section:first-of-type').appendChild(imageElement);
-        document.querySelector('.overview>main>section>section:first-of-type').appendChild(textElement);
+        if(savedImage) {
+            const imageElement = document.createElement('img');
+            imageElement.src = savedImage;
+            document.querySelector('.overview>main>section>section:first-of-type').appendChild(imageElement);
+        }
 
 
         // Set form data to overview page
