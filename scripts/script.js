@@ -86,12 +86,8 @@ switch (path) {
 
                 modelInput.classList.add('error');
             }
-
-
-
         });
         break;
-
 
 
 
@@ -113,25 +109,20 @@ switch (path) {
             document.querySelector('.overview>main>section>section:first-of-type').appendChild(textElement);
         }
 
-
         if(savedImage) {
             const imageElement = document.createElement('img');
             imageElement.src = savedImage;
             document.querySelector('.overview>main>section>section:first-of-type').appendChild(imageElement);
         }
 
+        if (color) {
+            svg.querySelector('path').setAttribute('fill', color);
+        }
 
         // Set form data to overview page
         document.querySelector('main>section>p:first-of-type').innerHTML = 'Kleur : ' + color;
         document.querySelector('main>section>p:nth-of-type(2)').innerHTML = 'Maat : ' + size;
         document.querySelector('main>section>p:nth-of-type(3)').innerHTML = 'Model : ' + gender;
-
-        if (color) {
-            svg.querySelector('path').setAttribute('fill', color);
-        }
-
-
-
 
 
         break;
