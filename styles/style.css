@@ -73,6 +73,7 @@ a {
     --background-color: #40474F;
     --accent-color: #FECE01;
     --text-color: #000000;
+    --main-color: #000000;
 
     --borderwidth-input: .1rem;
     --borderradius-input: .3rem;
@@ -99,8 +100,8 @@ main>section {
 
 /* Tshirt svg */
 main svg {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin: 3rem auto;
+
 }
 
 /* Gele buttons */
@@ -146,7 +147,7 @@ form>fieldset {
 
 form>label>select {
     background-color: #ffffff;
-    border: var(--borderwidth-input) solid black;
+    border: var(--borderwidth-input) solid var(--main-color);
     border-radius: var(--borderradius-input);
     padding: .2rem .5rem;
 }
@@ -156,12 +157,6 @@ input[type=radio] {
     appearance: none;
     position: absolute;
 }
-
-/* form>fieldset>label:nth-of-type(2),
-form>fieldset>label:nth-of-type(3),
-form>fieldset>label:nth-of-type(4),
-form>fieldset>label:nth-of-type(5),
-form>fieldset>label:nth-of-type(6) { */
 
 form>fieldset>label:not(:first-of-type) {
     border: var(--borderwidth-input) solid var(--text-color);
@@ -176,7 +171,6 @@ form>fieldset:nth-of-type(2)>label:not(:first-of-type) {
     width: calc(100%/3.1);
 }
 
-
 form>fieldset>input:checked+label {
     background-color: var(--text-color);
     color: white;
@@ -186,7 +180,7 @@ input[type=text],
 input[type=tel],
 input[type=email] {
     border-radius: var(--borderradius-input);
-    border: var(--borderwidth-input) solid black;
+    border: var(--borderwidth-input) solid var(--main-color);
     padding: 0 .5rem;
     width: 100%;
 }
@@ -200,7 +194,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    border: var(--borderwidth-input) solid black;
+    border: var(--borderwidth-input) solid var(--main-color);
 }
 
 
@@ -239,9 +233,9 @@ header>a>h1>span {
 }
 
 
-/********************/
+/*****************/
 /* Design pagina */
-/********************/
+/*****************/
 .design>main {
     display: flex;
     flex-direction: column;
@@ -249,21 +243,21 @@ header>a>h1>span {
 }
 
 .design>main>section>p,
-.overview>main>section>section>p {
+.overview>main>div>section>section:first-of-type>p {
     color: white;
     position: absolute;
-    top: 32%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
 }
 
 .design>main>section>img,
-.overview>main>section>section:first-of-type>img {
+.overview>main>div>section>section:first-of-type>img {
     max-height: 6rem;
     max-width: 4.5rem;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%);
 }
