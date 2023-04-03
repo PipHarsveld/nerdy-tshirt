@@ -74,6 +74,7 @@ a {
     --accent-color: #FECE01;
     --text-color: #000000;
     --main-color: #000000;
+    --border-color: #000000;
 
     --borderwidth-input: .1rem;
     --borderradius-input: .3rem;
@@ -159,7 +160,7 @@ input[type=radio] {
 }
 
 form>fieldset>label:not(:first-of-type) {
-    border: var(--borderwidth-input) solid var(--text-color);
+    border: var(--borderwidth-input) solid var(--border-color);
     border-radius: var(--borderradius-input);
     padding: .1rem .5rem;
     display: inline-block;
@@ -180,7 +181,7 @@ input[type=text],
 input[type=tel],
 input[type=email] {
     border-radius: var(--borderradius-input);
-    border: var(--borderwidth-input) solid var(--main-color);
+    border: var(--borderwidth-input) solid var(--border-color);
     padding: 0 .5rem;
     width: 100%;
 }
@@ -314,10 +315,12 @@ legend {
 
 
 
+/***************/
+/* Error state */
+/***************/
 
-
-.error {
-    border: 2px solid red;
+.error{
+    --border-color: red;
 }
 
 
@@ -344,5 +347,9 @@ legend {
     .design>main>section>p {
         font-size: 2vw;
         top: 30%;
+    }
+
+    form{
+        margin: 0;
     }
 }

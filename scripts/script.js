@@ -55,16 +55,17 @@ switch (path) {
 
 
         const sizeFieldset = form.querySelector('fieldset:nth-of-type(1)');
+        const sizeInputFields = form.querySelector('fieldset');
         const genderFieldset = form.querySelector('fieldset:nth-of-type(2)');
 
         form.addEventListener('submit', (event) => {
             if (!isRadioButtonChecked(sizeFieldset)) {
-                alert('Selecteer een maat');
+                sizeInputFields.classList.add('error');
                 event.preventDefault();
             }
 
             if (!isRadioButtonChecked(genderFieldset)) {
-                alert('Selecteer een model');
+                genderFieldset.classList.add('error');
                 event.preventDefault();
             }
         });
