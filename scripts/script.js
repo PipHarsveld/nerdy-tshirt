@@ -53,42 +53,32 @@ switch (path) {
             document.querySelector('.design>main>section').appendChild(shirtText);
         });
 
-        form.addEventListener('submit', function (event) {
-            const isValidForm = form.checkValidity();
 
-            event.preventDefault();
+        const sizeFieldset = form.querySelector('fieldset:nth-of-type(1)');
+        const genderFieldset = form.querySelector('fieldset:nth-of-type(2)');
 
-            if (isValidForm) {
-                console.log('form is valid');
+        form.addEventListener('submit', (event) => {
+            if (!isRadioButtonChecked(sizeFieldset)) {
+                alert('Selecteer een maat');
+                event.preventDefault();
+            }
 
-                // Get form values
-                const color = document.querySelector('#color').value;
-                const size = document.querySelector('input[name="size"]:checked').value;
-                const gender = document.querySelector('input[name="gender"]:checked').value;
-                const text = document.querySelector('#text').value;
-
-                // Save form data to localStorage
-                localStorage.setItem('color', color);
-                localStorage.setItem('size', size);
-                localStorage.setItem('gender', gender);
-                localStorage.setItem('text', text);
-
-                // Redirect to overview page
-                window.location.href = form.action;
-
-            } else {
-                console.log('form is not valid');
-
-                /***************************/
-                /* Error state werkt niet? */
-                /***************************/
-                const modelInput = document.querySelector('form');
-
-                modelInput.classList.add('error');
+            if (!isRadioButtonChecked(genderFieldset)) {
+                alert('Selecteer een model');
+                event.preventDefault();
             }
         });
-        break;
 
+        function isRadioButtonChecked(fieldset) {
+            const radioButtons = fieldset.querySelectorAll('input[type="radio"]');
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        break;
 
 
     case '/overview.html':
@@ -102,17 +92,17 @@ switch (path) {
         const gender = localStorage.getItem('gender');
         const savedText = localStorage.getItem('text');
         const savedImage = localStorage.getItem('image');
- 
-        if(savedText) {
+
+        if (savedText) {
             const textElement = document.createElement('p');
             textElement.innerText = savedText;
-            document.querySelector('.overview>main>section>section:first-of-type').appendChild(textElement);
+            document.querySelector('.overview>main>div>section:first-of-type>section:first-of-type').appendChild(textElement);
         }
 
-        if(savedImage) {
+        if (savedImage) {
             const imageElement = document.createElement('img');
             imageElement.src = savedImage;
-            document.querySelector('.overview>main>section>section:first-of-type').appendChild(imageElement);
+            document.querySelector('.overview>main>div>section:first-of-type>section:first-of-type').appendChild(imageElement);
         }
 
         if (color) {
@@ -120,9 +110,9 @@ switch (path) {
         }
 
         // Set form data to overview page
-        document.querySelector('main>section>p:first-of-type').innerHTML = 'Kleur : ' + color;
-        document.querySelector('main>section>p:nth-of-type(2)').innerHTML = 'Maat : ' + size;
-        document.querySelector('main>section>p:nth-of-type(3)').innerHTML = 'Model : ' + gender;
+        document.querySelector('.overview>main>div>section>section:nth-of-type(2)>p:first-of-type').innerHTML = 'Kleur : ' + color;
+        document.querySelector('.overview>main>div>section>section:nth-of-type(2)>p:nth-of-type(2)').innerHTML = 'Maat : ' + size;
+        document.querySelector('.overview>main>div>section>section:nth-of-type(2)>p:nth-of-type(3)').innerHTML = 'Model : ' + gender;
 
 
         break;
