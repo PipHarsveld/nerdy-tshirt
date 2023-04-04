@@ -111,8 +111,8 @@ main svg {
 input[type=submit] {
     background-color: var(--accent-color);
     padding: .5rem 1rem;
-    margin: .5rem;
-    display: inline-block;
+    margin: .5rem auto;
+    display: block;
     border-radius: var(--borderradius-button);
     text-align: center;
     width: fit-content;
@@ -139,6 +139,7 @@ legend {
 form>label {
     margin: .25rem 0;
     display: inline-block;
+    width: 100%;
 }
 
 form>fieldset {
@@ -267,11 +268,6 @@ header>a>h1>span {
     width: 100%;
 }
 
-.design input[type=submit] {
-    display: block;
-    margin: 2rem auto;
-}
-
 
 
 
@@ -284,17 +280,12 @@ header>a>h1>span {
     width: 100%;
 }
 
-.overview>main a {
-    margin: .5rem auto;
-    display: block;
-}
-
 .overview>main>a:nth-of-type(2) {
     background-color: transparent;
     border: 0.1rem solid var(--accent-color);
 }
 
-.overview>main>br {
+.overview>main>br, .index>main br {
     display: none;
 }
 
@@ -310,6 +301,9 @@ legend {
     margin: auto;
 }
 
+.order>main>form>input[type=submit] {
+    margin-top: 3rem;
+}
 
 
 
@@ -349,7 +343,7 @@ legend {
         top: 30%;
     }
 
-    form{
+    .design form{
         margin: 0;
     }
 }
