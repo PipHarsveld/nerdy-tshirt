@@ -35,7 +35,7 @@ switch (path) {
         });
 
 
-        colorInput.addEventListener('change', () => {
+        colorInput.addEventListener('input', () => {
             console.log('color input changed');
 
             const colorValue = colorInput.value;
