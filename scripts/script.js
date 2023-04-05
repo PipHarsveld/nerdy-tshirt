@@ -2,7 +2,6 @@
 var path = window.location.pathname;
 
 console.log(path);
-
 switch (path) {
     case '/':
         console.log('Home');
@@ -16,6 +15,7 @@ switch (path) {
         const image = document.createElement('img');
         const svgShirt = document.querySelector('svg');
 
+        // AFBEELDING UPLOADEN
         fileInput.addEventListener('change', (event) => {
             console.log('file input changed');
             const reader = new FileReader();
@@ -35,39 +35,56 @@ switch (path) {
         });
 
 
+        // KLEUR WIJZIGEN
         colorInput.addEventListener('input', () => {
-            console.log('color input changed');
-
             const colorValue = colorInput.value;
-            console.log(colorValue);
-            console.log(svgShirt.querySelector('path'));
             svgShirt.querySelector('path').setAttribute('style', ('fill:' + colorValue));
-
         });
 
-        const shirtText = document.createElement('p');
-        const TextInput = document.querySelector('form input[type="text"]');
 
-        TextInput.addEventListener('input', (e) => {
+        // TEKST TOEVOEGEN
+        const shirtText = document.createElement('p');
+        const textInput = document.querySelector('form input[type="text"]');
+
+        textInput.addEventListener('input', (e) => {
             shirtText.textContent = e.target.value;
             document.querySelector('.design>main>section').appendChild(shirtText);
         });
 
 
+        // FORM SUBMIT + VALIDATIE
         const sizeFieldset = form.querySelector('fieldset:nth-of-type(1)');
         const sizeInputFields = form.querySelector('fieldset');
         const genderFieldset = form.querySelector('fieldset:nth-of-type(2)');
 
         form.addEventListener('submit', (event) => {
+            console.log('form submitted');
+            event.preventDefault();
             if (!isRadioButtonChecked(sizeFieldset)) {
                 sizeInputFields.classList.add('error');
-                event.preventDefault();
+                
             }
 
             if (!isRadioButtonChecked(genderFieldset)) {
                 genderFieldset.classList.add('error');
                 event.preventDefault();
             }
+
+            // Get form values
+            const color = document.querySelector('#color').value;
+            const size = document.querySelector('input[name="size"]:checked').value;
+            const gender = document.querySelector('input[name="gender"]:checked').value;
+            const text = document.querySelector('#text').value;
+
+            console.log(color)
+            // Save form data to localStorage
+            localStorage.setItem('color', color);
+            localStorage.setItem('size', size);
+            localStorage.setItem('gender', gender);
+            localStorage.setItem('text', text);
+
+            // Redirect to overview page
+            window.location.href = form.action;
         });
 
         function isRadioButtonChecked(fieldset) {
@@ -93,6 +110,10 @@ switch (path) {
         const gender = localStorage.getItem('gender');
         const savedText = localStorage.getItem('text');
         const savedImage = localStorage.getItem('image');
+
+        if(savedText || savedImage || color) {
+            console.log("je hebt iets opgeslagen yay");
+        }
 
         if (savedText) {
             const textElement = document.createElement('p');
