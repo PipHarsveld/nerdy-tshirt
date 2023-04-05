@@ -303,6 +303,8 @@ header>a>h1>span {
     width: 100%;
     margin: 1rem 0;
     justify-content: center;
+    gap: 3rem;
+    flex-direction: column;
 }
 
 .overview>main>div>section {
@@ -310,10 +312,6 @@ header>a>h1>span {
     border: var(--borderwidth-input) solid var(--accent-color);
     border-radius: var(--borderradius-input);
     padding: 2rem;
-}
-
-.overview>main>div>section:nth-of-type(2) {
-    margin-left: 3rem;
 }
 
 .overview>main>a:nth-of-type(2) {
@@ -382,6 +380,10 @@ legend {
     .index>main>svg {
         height: 17rem;
         width: auto;
+    }
+
+    .overview>main>div {
+        flex-direction: row;
     }
 }
 
