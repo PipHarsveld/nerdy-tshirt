@@ -1,0 +1,287 @@
+/*************/
+/* CSS Reset */
+/*************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    overflow: auto;
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    padding: 1rem 2rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
+}
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+a,
+input,
+label,
+legend,
+button {
+    font-family: var(--font-paragraph);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+
+
+/********/
+/* Root */
+/********/
+:root {
+    --background-color: #40474F;
+    --accent-color: #FECE01;
+    --text-color: #222222;
+    --main-color: #222222;
+    --main-color2: #eeeeee;
+    --border-color: #222222;
+
+    --borderwidth-input: .1rem;
+    --borderradius-input: .3rem;
+    --borderradius-button: 5rem;
+
+    --font-headers: 'Poppins', Arial, sans-serif;
+    --font-paragraph: 'Poppins', Arial, sans-serif;
+}
+
+
+
+/********************/
+/* Algemene styling */
+/********************/
+h2 {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.order>main {
+    max-width: 35rem;
+    margin: auto;
+}
+
+.order>main::before {
+    content: "Vul alle velden van het formulier in om je bestelling te plaatsen. Voeg dit formulier samen met het design formulier samen in een enveloppe en stuur naar het volgende adres: De Hare 142, 8375 GE Oldemarkt";
+    text-align: center;
+    display: block;
+    margin: 1rem 0;
+    font-family: var(--font-paragraph);
+}
+
+.order>main::after {
+    content: "Formulier 2 van 2";
+    max-width: 35rem;
+    text-align: center;
+    font-family: var(--font-paragraph);
+    margin: 1rem 0;
+    display: block;
+}
+
+main>section {
+    position: relative;
+    width: fit-content;
+}
+
+/* Tshirt svg */
+main svg {
+    margin: 1.5rem auto;
+}
+
+
+.design>main::before {
+    content: "Vul dit formulier in om je eigen t-shirt te ontwerpen. Let erop dat je altijd een kleur, maat en model invult (tekst als opdruk is optioneel).";
+    max-width: 35rem;
+    text-align: center;
+    font-family: var(--font-paragraph);
+    margin: 1rem 0;
+}
+
+.design>main::after {
+    content: "Formulier 1 van 2";
+    max-width: 35rem;
+    text-align: center;
+    font-family: var(--font-paragraph);
+    margin: 1rem 0;
+}
+
+/********/
+/* Form */
+/********/
+
+legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    width: max-content;
+}
+
+form>label {
+    margin: .25rem 0;
+    display: inline-block;
+    width: 100%;
+}
+
+form>fieldset {
+    border: none;
+    margin: .5rem 0;
+    position: relative;
+}
+
+fieldset>label {
+    margin-right: 1rem;
+}
+
+input {
+    height: 2.5rem;
+}
+
+.design>main>form>label:nth-of-type(2)>input {
+    height: 5rem;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+    border-radius: var(--borderradius-input);
+    border: var(--borderwidth-input) solid var(--border-color);
+    padding: 0 .5rem;
+    width: 100%;
+}
+
+
+input[type=radio] {
+    height: 1rem;
+    transform: scale(1.5);
+    margin-right: .5rem;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+input[type=submit] {
+    display: none;
+}
+
+
+label[for="file"] {
+    display: none;
+}
+
+form>label:last-of-type {
+    display: none;
+}
+
+
+/**********/
+/* Header */
+/**********/
+header>a>h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--font-headers);
+    margin-left: 1rem;
+}
+
+header>a>h1>span {
+    color: var(--accent-color);
+    font-size: 7rem;
+    line-height: 1rem;
+}
+
+
+
+
+/*****************/
+/* Design pagina */
+/*****************/
+.design>main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.design>main>form>label:nth-of-type(2) {
+    width: 100%;
+}
+
+/*************/
+/* Bestellen */
+/*************/
+legend {
+    margin: auto;
+}
+
+
+
+
+@media screen and (min-width: 800px) {
+
+    .design>main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 5rem;
+        margin-top: 4rem;
+    }
+
+    .design>main>section>svg {
+        width: 25vw;
+        height: auto;
+        max-width: 25rem;
+    }
+
+    .design>main>section>img {
+        max-width: 9vw;
+        max-height: 13vw;
+    }
+
+    .design>main>section>p {
+        font-size: 2vw;
+        top: 25%;
+    }
+
+    .design form {
+        margin: 0;
+    }
+}
