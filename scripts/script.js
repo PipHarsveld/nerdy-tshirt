@@ -76,7 +76,6 @@ switch (path) {
             const gender = document.querySelector('input[name="gender"]:checked').value;
             const text = document.querySelector('#text').value;
 
-            console.log(color)
             // Save form data to localStorage
             localStorage.setItem('color', color);
             localStorage.setItem('size', size);
@@ -102,7 +101,7 @@ switch (path) {
     case '/overview.html':
         console.log('overview');
 
-        const svg = document.querySelector('svg');
+        const svg = document.querySelector('section:nth-of-type(2)>section>svg');
 
         // Get form data from localStorage
         const color = localStorage.getItem('color');
@@ -113,18 +112,20 @@ switch (path) {
 
         if(savedText || savedImage || color) {
             console.log("je hebt iets opgeslagen yay");
+            const extraShirt = document.querySelector('.overview>main>div>section:nth-of-type(2)');
+            extraShirt.classList.remove('extraShirt');
         }
 
         if (savedText) {
             const textElement = document.createElement('p');
             textElement.innerText = savedText;
-            document.querySelector('.overview>main>div>section:first-of-type>section:first-of-type').appendChild(textElement);
+            document.querySelector('.overview>main>div>section:nth-of-type(2)>section:first-of-type').appendChild(textElement);
         }
 
         if (savedImage) {
             const imageElement = document.createElement('img');
             imageElement.src = savedImage;
-            document.querySelector('.overview>main>div>section:first-of-type>section:first-of-type').appendChild(imageElement);
+            document.querySelector('.overview>main>div>section:nth-of-type(2)>section:first-of-type').appendChild(imageElement);
         }
 
         if (color) {
@@ -132,9 +133,9 @@ switch (path) {
         }
 
         // Set form data to overview page
-        document.querySelector('.overview>main>div>section>section:nth-of-type(2)>p:first-of-type').innerHTML = 'Kleur : ' + color;
-        document.querySelector('.overview>main>div>section>section:nth-of-type(2)>p:nth-of-type(2)').innerHTML = 'Maat : ' + size;
-        document.querySelector('.overview>main>div>section>section:nth-of-type(2)>p:nth-of-type(3)').innerHTML = 'Model : ' + gender;
+        document.querySelector('.overview>main>div>section:nth-of-type(2)>section:nth-of-type(2)>p:first-of-type').innerHTML = 'Kleur : ' + color;
+        document.querySelector('.overview>main>div>section:nth-of-type(2)>section:nth-of-type(2)>p:nth-of-type(2)').innerHTML = 'Maat : ' + size;
+        document.querySelector('.overview>main>div>section:nth-of-type(2)>section:nth-of-type(2)>p:nth-of-type(3)').innerHTML = 'Model : ' + gender;
 
 
         break;

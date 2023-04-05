@@ -279,7 +279,7 @@ header>a>h1>span {
 /* Overview */
 /************/
 .overview>main>div {
-    display: grid;
+    display: flex;
     width: 100%;
     margin: 1rem 0;
     justify-content: center;
@@ -289,8 +289,11 @@ header>a>h1>span {
     position: relative;
     border: var(--borderwidth-input) solid var(--accent-color);
     border-radius: var(--borderradius-input);
-    margin-right: auto;
     padding: 2rem;
+}
+
+.overview>main>div>section:nth-of-type(2){
+    margin-left: 3rem;
 }
 
 .overview>main>a:nth-of-type(2) {
@@ -359,4 +362,9 @@ legend {
 
 .error{
     --border-color: red;
+}
+
+
+.extraShirt{
+    display: none;
 }
