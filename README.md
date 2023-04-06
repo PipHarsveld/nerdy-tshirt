@@ -81,14 +81,19 @@ De test met Firefox verliep ook vrij soepel, en ik zag niet meteen problemen. In
 ### Safari
 Ik heb mijn website ook getest in Safari, zowel op desktop als op mobiel. In beide gevallen werkte de website volledig naar behoren, dus was het niet nodig om aanpassingen te doen!
 
-
 ### Samsung Internet
 Tijdens het testen op Samsung internet liep in eigenlijk niet tegen grote problemen aan. Het enige wat ik nog de styling voor de design pagina, aangezien het mogelijk was om horizontaal te scrollen wat uiteraard niet de bedoeling is. Dit probleem heb ik opgelost door de body width op 100vw te zetten. Hierdoor is de pagina nooit breder dan de breedte van de viewport van je huidige device.
 
 ## :incoming_envelope:PrinceXML
 Als obscure browser heb ik gekozen om te testen met PrinceXML. PrinceXML is een tool die HTML en CSS kan omzetten naar PDF. Ik heb dit gedaan omdat ik het interessant vond om te zien hoe mijn website eruit zou zien als PDF en met een hele andere kijk op de website te designen. Ik ben begonnen met een PDF te maken van de site toen hij op dat moment was, maar dat was niet al te best. De invoervelden waren erg klein, er was geen styling op de `<input>` elementen en de tekst was niet goed leesbaar. Ook was het mogelijk om een bestand te uploaden voor op het shirt. 
 
-The usecase die ik bedacht heb voor Prince XML is dat de gebruiker het internet niet vertrouwd om zijn of haar gegevens op te versturen, en het daarom liever via de post zou doen. De gebruiker kan nu mijn website door middel van PrinceXML omzetten naar een PDF, deze vervolgens printen en opsturen. 
+The usecase die ik bedacht heb voor Prince XML is dat de gebruiker het internet niet vertrouwd om zijn of haar gegevens op te versturen, en het daarom liever via de post zou doen. De gebruiker kan nu mijn website door middel van PrinceXML omzetten naar een PDF, deze vervolgens printen en opsturen. Om het toegankelijker te maken als geprinte website, heb ik een extra CSS bestandje aangemaakt met daarin de volgende aanpassingen:
+
+- [X] De invoervelden zijn groter gemaakt
+- [X] De buttons zijn weggehaald
+- [X] Het uploadveld voor de afbeelding is weggehaald
+- [X] De invoervelden voor maar en model zijn aangepast, waardoor de gebruiker het nu als checkbox kan aanvinken
+- [X] Tekst toegevoegd met instructies en verzendinformatie
 
 ## :technologist:Maker van Shirt.
 Dit project is ontworpen en gemaakt door [Pip Harsveld](https://github.com/PipHarsveld) voor het vak Browser Technologies in de minor Webdesign and Development bij de Hogeschool van Amsterdam.
