@@ -66,6 +66,7 @@ a {
 
 
 
+
 /********/
 /* Root */
 /********/
@@ -84,6 +85,7 @@ a {
     --font-headers: 'Poppins', Arial, sans-serif;
     --font-paragraph: 'Poppins', Arial, sans-serif;
 }
+
 
 
 
@@ -120,6 +122,9 @@ input[type=submit] {
     min-width: 13rem;
     border: none;
 }
+
+
+
 
 
 /********/
@@ -197,13 +202,13 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=radio]{
+input[type=radio] {
     width: calc(100%/5.3);
     height: 2rem;
     border: none;
 }
 
-fieldset:nth-of-type(2)>input[type=radio]{
+fieldset:nth-of-type(2)>input[type=radio] {
     width: calc(100%/3.1);
 }
 
@@ -211,15 +216,18 @@ input[type=submit]:hover {
     border: var(--borderwidth-input) solid var(--main-color);
 }
 
-input:focus-within + label {
+input:focus-within+label {
     background-color: var(--main-color);
     color: var(--main-color2);
     border: none;
 }
 
-.design>main>form>input[type=submit]{
+.design>main>form>input[type=submit] {
     margin-top: 1.5rem;
 }
+
+
+
 
 /**********/
 /* Header */
@@ -253,6 +261,8 @@ header>a>h1>span {
     background-color: transparent;
     border: .1rem solid var(--accent-color);
 }
+
+
 
 
 /*****************/
@@ -388,15 +398,17 @@ legend {
 }
 
 
-    /***************/
-    /* Error state */
-    /***************/
+/***************/
+/* Error state */
+/***************/
+.error {
+    --border-color: red;
+}
 
-    .error {
-        --border-color: red;
-    }
 
-
-    .extraShirt {
-        display: none;
-    }
+/****************/
+/* Tweede shirt */
+/****************/
+.extraShirt {
+    display: none;
+}
